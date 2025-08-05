@@ -18,24 +18,7 @@ public class CartService {
     @Autowired
     private ProductRepository productRepository;
 
-    public Cart addToCart(Long cartId, int productId) {
-        logger.info("Adding product {} to cart {}", productId, cartId);
-        Cart cart = cartRepository.findById(cartId).orElse(new Cart());
-        Product product = productRepository.findById(productId).orElse(null);
-        if (product != null) {
-            cart.getProducts().add(product);
-            cartRepository.save(cart);
-        }
-        return cart;
-    }
 
-    public Cart getCart(Long cartId) {
-        logger.info("Fetching cart {}", cartId);
-        return cartRepository.findById(cartId).orElse(null);
-    }
 
-    public void checkout(Long cartId) {
-        logger.info("Checking out cart {}", cartId);
-        cartRepository.deleteById(cartId);
-    }
+// CartService removed to eliminate cart feature and related errors.
 // CartService removed to eliminate cart feature and related errors.
