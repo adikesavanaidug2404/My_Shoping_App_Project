@@ -34,7 +34,7 @@
             </thead>
             <tbody>
                 <tr th:each="product : ${products}">
-                    <td><img th:src="${product.imageUrl}" alt="Product Image" class="product-img" /></td>
+                    <td><img th:src="${product.imageUrl}" alt="Product Image" class="product-img" onerror="this.onerror=null;this.src='https://via.placeholder.com/64?text=No+Image';" /></td>
                     <td th:text="${product.id}"></td>
                     <td th:text="${product.name}"></td>
                     <td th:text="${product.price}" class="price"></td>
