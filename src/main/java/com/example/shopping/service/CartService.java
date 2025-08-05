@@ -1,6 +1,7 @@
+
+package com.example.shopping.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-package com.example.shopping.service;
 
 import com.example.shopping.model.Cart;
 import com.example.shopping.model.Product;
