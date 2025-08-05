@@ -14,6 +14,7 @@
         th { background: #2d6cdf; color: #fff; font-weight: 600; }
         tr:hover { background: #e3eafc; }
         .price { color: #27ae60; font-weight: bold; }
+        .product-img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 2px solid #e3eafc; background: #fff; }
     </style>
 </head>
 <body>
@@ -25,6 +26,7 @@
         <table id="productsTable">
             <thead>
                 <tr>
+                    <th>Image</th>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Price</th>
@@ -32,6 +34,7 @@
             </thead>
             <tbody>
                 <tr th:each="product : ${products}">
+                    <td><img th:src="${product.imageUrl}" alt="Product Image" class="product-img" /></td>
                     <td th:text="${product.id}"></td>
                     <td th:text="${product.name}"></td>
                     <td th:text="${product.price}" class="price"></td>

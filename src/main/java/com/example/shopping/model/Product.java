@@ -13,6 +13,7 @@ public class Product {
     private int id;
     private String name;
     private double price;
+    private String imageUrl;
 
     // Getters and Setters
     public int getId() { return id; }
@@ -21,4 +22,6 @@ public class Product {
     public void setName(String name) { this.name = name; }
     public double getPrice() { return price; }
     public void setPrice(double price) { this.price = price; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }
