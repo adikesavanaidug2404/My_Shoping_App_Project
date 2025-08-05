@@ -42,4 +42,3 @@ public class CartApiTests {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Checked out successfully!"));
     }
-// CartApiTests removed to eliminate cart feature and related errors.
