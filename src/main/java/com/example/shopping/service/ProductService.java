@@ -22,29 +22,30 @@ public class ProductService {
         logger.info("Fetching all products");
         List<Product> products = productRepository.findAll();
         if (products == null || products.isEmpty()) {
+            String placeholder = "https://via.placeholder.com/64?text=Product";
             Product p1 = new Product();
             p1.setId(1);
             p1.setName("Apple iPhone 15");
             p1.setPrice(999.99);
-            p1.setImageUrl("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-max-model-unselect-gallery-1-202309?wid=512&hei=512&fmt=jpeg&qlt=95&.v=1692923778665");
+            p1.setImageUrl(placeholder);
 
             Product p2 = new Product();
             p2.setId(2);
             p2.setName("Samsung Galaxy S24");
             p2.setPrice(899.99);
-            p2.setImageUrl("https://images.samsung.com/is/image/samsung/p6pim/in/sm-s921bzvdins/gallery/in-galaxy-s24-s921-491678-sm-s921bzvdins-thumb-539232237?$172_172_PNG$");
+            p2.setImageUrl(placeholder);
 
             Product p3 = new Product();
             p3.setId(3);
             p3.setName("Sony WH-1000XM5 Headphones");
             p3.setPrice(349.99);
-            p3.setImageUrl("https://m.media-amazon.com/images/I/61D8nG2AqCL._AC_UF1000,1000_QL80_.jpg");
+            p3.setImageUrl(placeholder);
 
             Product p4 = new Product();
             p4.setId(4);
             p4.setName("Apple MacBook Air M2");
             p4.setPrice(1199.99);
-            p4.setImageUrl("https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-13-midnight-gallery1-20220606?wid=512&hei=512&fmt=jpeg&qlt=95&.v=1654122880566");
+            p4.setImageUrl(placeholder);
 
             return Arrays.asList(p1, p2, p3, p4);
         }
